@@ -56,6 +56,9 @@
     @include type-style('body-short-01');
     line-height: 1.45;
     max-width: rem(88px);
+    // flex-grow:1 is needed to constrict the width of the label to the max-width for IE11
+    // to allow the ellipsis to display in the container with overflow: hidden
+    flex-grow: 1;
     margin: $carbon--spacing-03 0 0 0;
     white-space: nowrap;
     overflow: hidden;
